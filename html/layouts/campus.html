@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    {{> header}}
-    <body>
-        {{> preloader}}
-        {{> navbar}}
-        {{> body}}
-        {{> campus-tabs}}
-        {{> footer}}
-        {{> backtotop}}
-        <!--{{> sidebar}}-->
-        {{> scripts}}
-    </body>  
+{{> header}}
+
+<body>
+    {{> preloader}}
+    {{> navbar}}
+    <section class="hero is-fullheight is-default is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-vcentered">
+                    <div class="column is-5 is-offset-1 landing-caption">
+                        <h1 class="title is-1 is-bold is-spaced">
+                            {{title}}
+                        </h1>
+                        <h2 class="subtitle is-5 is-muted">{{description}}</h2>
+                    </div>
+                    <div class="column is-5 is-offset-1">
+                        <figure class="image is-4by3">
+                            <img src="assets/images/illustrations/worker.svg" alt="Description">
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    {{> body}}
+    {{> campus-tabs}}
+    {{> footer}}
+    {{> backtotop}}
+    <!--{{> sidebar}}-->
+    {{> scripts}}
+</body>
+
 </html>
