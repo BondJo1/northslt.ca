@@ -1,0 +1,29 @@
+<div class="contact-us">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Contact Us</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <form name="contact" method="POST" netlify>
+                <p>
+                    <label>Your Name: <input type="text" name="name" /></label>
+                </p>
+                <p>
+                    <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                    <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
+            </form>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success">Send!</button>
+            <button class="button">Cancel</button>
+        </footer>
+    </div>
+</div>
