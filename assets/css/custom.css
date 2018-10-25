@@ -15,27 +15,28 @@
 .slides {
   display: flex;
   overflow-x: auto;
-  
   border-radius: 5px;
-  
   scroll-behavior: smooth;
-  
   -webkit-overflow-scrolling: touch;
   scroll-snap-points-x: repeat(300px);
   scroll-snap-type: mandatory;
 }
+
 .slides::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
+
 .slides::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 10px;
 }
+
 .slides::-webkit-scrollbar-track {
   background: transparent;
 }
-.slides > div {
+
+.slides>div {
   flex-shrink: 0;
   width: 300px;
   height: 300px;
@@ -45,15 +46,16 @@
   transform: scale(1);
   transition: transform 0.5s;
   position: relative;
-  
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 100px;
 }
-.slides > div:target {
+
+.slides>div:target {
   transform: scale(0.8);
 }
+
 .author-info {
   background: rgba(0, 0, 0, 0.75);
   color: white;
@@ -65,9 +67,11 @@
   width: 100%;
   margin: 0;
 }
+
 .author-info a {
   color: white;
 }
+
 img {
   object-fit: cover;
   position: absolute;
@@ -77,7 +81,7 @@ img {
   height: 100%;
 }
 
-.slider > a {
+.slider>a {
   display: inline-flex;
   width: 1.5rem;
   height: 1.5rem;
@@ -89,16 +93,19 @@ img {
   margin: 0 0 0.5rem 0;
   position: relative;
 }
-.slider > a:active {
+
+.slider>a:active {
   top: 1px;
 }
-.slider > a:focus {
+
+.slider>a:focus {
   background: #000;
 }
 
 /* Don't need button navigation */
+
 @supports (scroll-snap-type) {
-  .slider > a {
+  .slider>a {
     display: none;
   }
 }
@@ -107,6 +114,7 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
+
 body {
   display: flex;
   align-items: center;
