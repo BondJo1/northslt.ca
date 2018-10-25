@@ -11,7 +11,7 @@ var panini = require('panini');
 var concat = require('gulp-concat');
 var port = process.env.SERVER_PORT || 8080;
 var nodepath =  'node_modules/';
-const bulmaCarousel = require('../src/js/index').default;
+const bulmaCarousel = require('assets/js/carousel.js').default;
 
 // Starts a BrowerSync instance
 gulp.task('server', ['build'], function(){
