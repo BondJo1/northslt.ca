@@ -11,7 +11,6 @@ var panini = require('panini');
 var concat = require('gulp-concat');
 var port = process.env.SERVER_PORT || 8080;
 var nodepath =  'node_modules/';
-const bulmaCarousel = require('assets/js/carousel.js').default;
 
 // Starts a BrowerSync instance
 gulp.task('server', ['build'], function(){
@@ -170,21 +169,3 @@ gulp.task('copy-images', function() {
 gulp.task('init', ['setupBulma']);
 gulp.task('build', ['clean','copy','compile-js', 'copy-js', 'compile-sass', 'compile-scss', 'compile-html', 'copy-images']);
 gulp.task('default', ['server', 'watch']);
-
-describe('bulmaCarousel', () => {
-  test('Should throw exception if instanciate with no/wrong selector', () => {
-    expect(() => {
-      new bulmaCarousel();
-    }).toThrow('An invalid selector or non-DOM node has been provided.');
-  });
-
-  test('Should return an array', () => {
-    var instances = bulmaCarousel.attach('.selector');
-    expect(Array.isArray(instances)).toBe(true);
-  });
-
-  test('Should return an array of bulmaCarousel instances', () => {
-    var instances = bulmaCarousel.attach();
-    instances.every(i => expect(i).toBeInstanceOf(bulmaCarousel));
-  });
-});
