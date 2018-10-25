@@ -1,3 +1,7 @@
 .feature-card {
     height: 105% !important;
 }
+
+.mySlides {
+    display:none;
+}
