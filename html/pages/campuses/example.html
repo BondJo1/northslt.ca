@@ -1,22 +1,61 @@
 ---
 title: Example
 description: Example Campus Page using Bootstrap Featuers with Bulma Integration
-intro-text: blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-
+intro-text:
+blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-
 layout: campus
 ---
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-<h2 class="w3-center">Manual Slideshow</h2>
-
-<div class="w3-content w3-display-container">
-
 <img class="mySlides" src="https://beta.northslt.ca/assets/images/campuses/montreal.jpg">
 <img class="mySlides" src="https://beta.northslt.ca/assets/images/campuses/mossley.jpg">
 <img class="mySlides" src="https://beta.northslt.ca/assets/images/campuses/maple-creek.jpg">
 <img class="mySlides" src="https://beta.northslt.ca/assets/images/campuses/oxbow.jpg">
+<!-- Container for the image gallery -->
+<div class="container">
 
-<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4/div>
+      <img src="https://beta.northslt.ca/assets/images/campuses/montreal.jpg" style="width:100%">
+    </div>
 
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="https://beta.northslt.ca/assets/images/campuses/mossley.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="https://beta.northslt.ca/assets/images/campuses/maple-creek.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="https://beta.northslt.ca/assets/images/campuses/oxbow.jpg" style="width:100%">
+    </div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://beta.northslt.ca/assets/images/campuses/montreal.jpg" style="width:100%" onclick="currentSlide(1)" alt="Montreal">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://beta.northslt.ca/assets/images/campuses/mossley.jpg" style="width:100%" onclick="currentSlide(2)" alt="Mossley">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://beta.northslt.ca/assets/images/campuses/maple-creek.jpg" style="width:100%" onclick="currentSlide(3)" alt="Maple Creek">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://beta.northslt.ca/assets/images/campuses/oxbow.jpg" style="width:100%" onclick="currentSlide(4)" alt="Oxbow">
+    </div>
+  </div>
 </div>
