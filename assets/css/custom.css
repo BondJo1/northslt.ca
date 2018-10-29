@@ -1,3 +1,7 @@
 .feature-card {
   height: 105% !important;
 }
+
+.hero-body {
+  background-image: url('{{ root }}assets/images/illustrations/backgrounds/001-chalkboard.jpg');
+}
