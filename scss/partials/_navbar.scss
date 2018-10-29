@@ -113,7 +113,11 @@ Navbar
   }
 }
 
-//Transparent
-.is-transparent {
-  background-image: url(../images/illustrations/backgrounds/001-chalkboard.jpg);
+//Transparency
+.navbar {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
