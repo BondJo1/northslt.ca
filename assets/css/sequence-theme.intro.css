@@ -18,7 +18,6 @@
  *
  * Copyright © 2015 Ian Lunn Design Limited unless otherwise stated.
  */
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:500,400,300,700|Montserrat:400,700|Droid+Sans+Mono);
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 body {
   background: #F8F8F8;
@@ -323,7 +322,7 @@ body {
 }
 .seq .seq-step {
   position: relative;
-  font-family: Ubuntu, sans-serif;
+  font-family: sans-serif;
 }
 .seq .seq-step p {
   font-weight: 300;
@@ -467,7 +466,7 @@ body {
   padding: 0;
   line-height: 1;
   font-size: .75em;
-  font-family: Ubuntu, sans-serif;
+  font-family: sans-serif;
   font-weight: 700;
 }
 .seq .seq-examples li img {
