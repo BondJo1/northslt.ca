@@ -4,5 +4,6 @@ if ( hasVisited != null ) {
     console.log("The hasVisited cookie has been set, value is " + hasVisited)
 }
 else {
+    $('#firstvisit').css({'visibility':'hidden'});
     console.log("The hasVisited cookie is already created, value is " + hasVisited)
 }
