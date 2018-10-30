@@ -4,5 +4,5 @@ if ( testCookie != null ) {
     console.log("Test cookie has been created, value is" + testCookie)
 }
 else {
-    console.log(testCookie)
+    console.log("Cookie is already created, value is" + testCookie)
 }
