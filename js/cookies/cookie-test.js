@@ -1,3 +1,3 @@
 Cookies.set('test', 'testing cookiejs');
-var testCookie = Cookies.get('name');
+var testCookie = Cookies.get('test');
 console.log(testCookie)
