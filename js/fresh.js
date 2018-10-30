@@ -49,13 +49,13 @@ $(document).ready(function(){
     }
 
     //Navbar Clone
-    if ($('#navbar-clone').length) {
+    if ($('#navbar-sticky').length) {
         $(window).scroll(function() {    // this will work when your window scrolled.
             var height = $(window).scrollTop();  //getting the scrolling height of window
             if(height  > 50) {
-                $("#navbar-clone").addClass('is-active');
+                $("#navbar-sticky").addClass('is-active');
             } else{
-                $("#navbar-clone").removeClass('is-active');
+                $("#navbar-sticky").removeClass('is-active');
             }
         });
     }
