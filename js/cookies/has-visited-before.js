@@ -1,5 +1,9 @@
 var hasVisited = Cookies.get('hasVisited');
-if (hasVisited != undefined) {
+if (hasVisited != "true") {
+    var hasVisited = Cookies.get('hasVisited')
+    console.log("The hasVisited cookie is already created, value is " + hasVisited)
+}
+else {
     var modal = document.querySelector('.modal');  // assuming you have only 1
     var html = document.querySelector('html');
     modal.classList.add('is-active');
@@ -7,8 +11,4 @@ if (hasVisited != undefined) {
     Cookies.set('hasVisited', 'true', { expires: 365 });
     var hasVisited = Cookies.get('hasVisited')
     console.log("The hasVisited cookie has been set, value is " + hasVisited)
-}
-else {
-    var hasVisited = Cookies.get('hasVisited')
-    console.log("The hasVisited cookie is already created, value is " + hasVisited)
 }
