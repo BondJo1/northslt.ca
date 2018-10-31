@@ -1,7 +1,22 @@
 @charset "UTF-8";
 /**
- * Theme Name: Image Slider
+ * Theme Name: Intro
  * Version: 1.0.0
+ * Theme URL: http://sequencejs.com/themes/intro/
+ *
+ * The Sequence.js introduction theme used to briefly describe how Sequence.js works
+ *
+ * This theme is powered by Sequence.js - The
+ * responsive CSS animation framework for creating unique sliders,
+ * presentations, banners, and other step-based applications.
+ *
+ * Author: Ian Lunn
+ * Author URL: http://ianlunn.co.uk/
+ *
+ * Theme License: http://sequencejs.com/licenses/#free-theme
+ * Sequence.js Licenses: http://sequencejs.com/licenses/
+ *
+ * Copyright © 2015 Ian Lunn Design Limited unless otherwise stated.
  */
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 body {
@@ -85,6 +100,26 @@ body {
   opacity: 0;
   line-height: 1.4;
 }
+.seq .seq-canvas > *:after {
+  /* Semi-transparent overlay shown when the codepane is opened in mobile layout */
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  -webkit-transform: translateZ(20px);
+  transform: translateZ(20px);
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+  -webkit-transition-delay: .25s;
+  transition-delay: .25s;
+  -webkit-transition-property: opacity, z-index;
+  transition-property: opacity, z-index;
+}
 .seq .seq-canvas .seq-in {
   opacity: 1;
 }
@@ -120,6 +155,171 @@ body {
   font-size: 16px;
   font-size: 1rem;
 }
+.seq .seq-code-pane {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  color: white;
+  /* Place the code pane off-screen at the bottom - it will animate in
+   * from the bottom
+   */
+  -webkit-transform: translateY(100%) translateZ(20px);
+  transform: translateY(100%) translateZ(20px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+.seq .seq-code-pane .seq-step-icon {
+  position: absolute;
+  z-index: 20;
+  /* Vertically align the icon */
+  top: 50%;
+  margin-top: -.9375em;
+  /* Position the icon in the center of the gutter */
+  left: -2.2em;
+}
+.seq .seq-code-pane span {
+  display: block;
+}
+.seq .seq-in .seq-code-pane {
+  /*
+   * Only animate the code-pane opening when the step is active
+   * This allows the code-pane to immediately snap shut when navigating to
+   * another step without closing the pane
+   */
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+}
+.seq .seq-code-pane-snap-shut .seq-code-pane {
+  -webkit-transition-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+.seq .seq-in.seq-code-pane-open {
+  /*
+   * When the "Show Code" button is clicked on a mobile device, show the
+   * semi-transparent overlay and open the code pane
+   */
+}
+.seq .seq-in.seq-code-pane-open:after {
+  /* Semi-transparent overlay */
+  z-index: 10;
+  opacity: 1;
+  -webkit-transform: translateZ(20px);
+  transform: translateZ(20px);
+}
+.seq .seq-in.seq-code-pane-open .seq-code-pane {
+  /* Open code-pane */
+  -webkit-transform: translateY(0) translateZ(20px);
+  transform: translateY(0) translateZ(20px);
+}
+.seq .seq-view-code {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 35px;
+  height: 2.1875rem;
+  margin: 0;
+  padding: 8px 0;
+  padding: .5rem 0;
+  text-align: center;
+  background: #303030;
+  border: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  /*
+   * Place the view-code button on top of the code-pane so it appears when
+   * the code pane is closed
+   */
+  margin-top: -35px;
+  margin-top: -2.1875rem;
+}
+.seq .seq-view-code:focus {
+  outline: dotted gray 1px;
+}
+.seq .seq-view-code:active {
+  background: black;
+}
+.seq .seq-view-code:focus i, .seq .seq-view-code:hover i {
+  color: #16B557;
+}
+.seq .seq-view-code i {
+  color: #36C26F;
+  /* Override fontawesome to stop 1px move when parent is animated */
+  -webkit-transform: none;
+  transform: none;
+}
+.seq .seq-view-code .seq-step-icon {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transform: none;
+  transform: none;
+}
+.seq .seq-code {
+  width: 100%;
+  padding: 14px 0;
+  padding: .875rem 0;
+  /* Add a fake gutter to the left */
+  border-left-color: #303030;
+  border-left-style: solid;
+  border-left-width: 40px;
+  border-left-width: 2.5rem;
+}
+.seq .seq-code-block {
+  position: relative;
+  padding: 0 .5em;
+}
+.seq .seq-code-block code {
+  display: block;
+  line-height: 1.6;
+  font-family: 'Droid Sans Mono', Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+  font-size: .75em;
+  /* Smooth fonts and prevent pixelation during transforms */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.seq .seq-code-block span {
+  line-height: 1.6;
+}
+.seq .seq-code-block + .seq-code-block {
+  margin-top: 1em;
+}
+.seq .seq-code-1 {
+  /* indent code lines */
+  margin-left: 1em;
+}
+.seq .seq-content {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* Make room for the top bar */
+  padding-top: 26px;
+  padding-top: 1.625rem;
+  /* Make room for the un-open code pane */
+  padding-bottom: 35px;
+  padding-bottom: 2.1875rem;
+  text-align: center;
+  background: white;
+}
+.seq .seq-content code {
+  position: relative;
+}
 .seq .seq-step {
   position: relative;
   font-family: sans-serif;
@@ -128,7 +328,7 @@ body {
   font-weight: 300;
 }
 .seq em,
-.seq .seq-content {
+.seq .seq-content code {
   background: white;
   font-style: normal;
   padding: .25em;
@@ -829,20 +1029,20 @@ body {
   -webkit-transform: translateX(0) translateY(0) translateZ(1px);
   transform: translateX(0) translateY(0) translateZ(1px);
 }
-.seq .seq-in {
+.seq .seq-in .seq-code-block {
   opacity: 1;
   -webkit-transform: translateY(0) translateZ(0);
   transform: translateY(0) translateZ(0);
 }
-.seq .seq-in:nth-of-type(2) {
+.seq .seq-in .seq-code-block:nth-of-type(2) {
   -webkit-transition-delay: .1s;
   transition-delay: .1s;
 }
-.seq .seq-in:nth-of-type(3) {
+.seq .seq-in .seq-code-block:nth-of-type(3) {
   -webkit-transition-delay: .2s;
   transition-delay: .2s;
 }
-.seq .seq-in:nth-of-type(4) {
+.seq .seq-in .seq-code-block:nth-of-type(4) {
   -webkit-transition-delay: .3s;
   transition-delay: .3s;
 }
@@ -904,7 +1104,7 @@ body {
   -webkit-transform: translateX(-100%) translateZ(1px);
   transform: translateX(-100%) translateZ(1px);
 }
-.seq .seq-out {
+.seq .seq-out .seq-code-block {
   opacity: 0;
   -webkit-transform: translateY(-20px) translateZ(0);
   transform: translateY(-20px) translateZ(0);
@@ -931,13 +1131,16 @@ body {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
-
-.seq.seq-fallback .seq.seq-fallback {
+.seq.seq-fallback {
+  /* Styles for older browsers using the fallback theme */
+}
+.seq.seq-fallback .seq-code-pane,
+.seq.seq-fallback .seq-code-pane-snap-shut .seq-code-pane {
   -webkit-transform: none !important;
   transform: none !important;
   top: 100%;
 }
-.seq.seq-fallback .seq-in {
+.seq.seq-fallback .seq-in.seq-code-pane-open .seq-code-pane {
   top: auto;
 }
 .seq.seq-fallback .seq-touch-title-1 {
@@ -1041,15 +1244,35 @@ body {
   .seq.seq-fallback .seq-code {
     margin-left: -2.5rem;
   }
-  .seq.seq-fallback .seq.seq-fallback .seq.seq-fallback {
+  .seq.seq-fallback .seq-code-pane,
+  .seq.seq-fallback .seq-code-pane-snap-shut .seq-code-pane,
+  .seq.seq-fallback .seq-in.seq-code-pane-open .seq-code-pane {
     top: 0;
   }
-
+  .seq .seq-canvas:before {
+    /* Add a background where the code will appear */
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: calc(30% - 2.5em);
+    background: black;
+    /* Add a fake gutter to the left */
+    border-left-color: #303030;
+    border-left-style: solid;
+    border-left-width: 40px;
+    border-left-width: 2.5rem;
+  }
   .seq .seq-canvas:after {
     /* Used for detecting screen size in JavaScript */
     content: "large";
   }
-  .seq {
+  .seq .seq-canvas > *:after {
+    /* Hide the code overlay in large layout */
+    content: none;
+  }
+  .seq .seq-code {
     box-sizing: border-box;
     padding-left: 40px;
     padding-left: 2.5rem;
@@ -1057,7 +1280,7 @@ body {
     padding-right: .875rem;
     border: none;
   }
-  .seq {
+  .seq .seq-code-pane {
     display: block;
     top: 26px;
     top: 1.625rem;
@@ -1071,14 +1294,14 @@ body {
     -webkit-transition: none;
     transition: none;
   }
-  .seq {
+  .seq .seq-code-pane code {
     font-size: .875em;
   }
-  .seq {
+  .seq .seq-view-code {
     /* Hide the view code button on large layout */
     display: none;
   }
-  .seq {
+  .seq .seq-code-block {
     opacity: 0;
     -webkit-transform: translateY(10px) translateZ(0);
     transform: translateY(10px) translateZ(0);
