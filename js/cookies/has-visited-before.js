@@ -1,5 +1,5 @@
 var hasVisited = Cookies.get('hasVisited');
-if (hasVisited != "true") {
+if (hasVisited = "true") {
     var hasVisited = Cookies.get('hasVisited')
     console.log("The hasVisited cookie is already created, value is " + hasVisited)
 }
