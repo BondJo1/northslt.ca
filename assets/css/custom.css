@@ -9,3 +9,7 @@
 .modal-content {
   color: white;
 }
+
+#firstvisit {
+  z-index: 99999;
+}
