@@ -11,7 +11,7 @@ else {
         modal.classList.remove('is-active');
         html.classList.remove('is-clipped');
     });
-    modal.querySelector('.modal-close.is-large').addEventListener('click', function (e) {
+    modal.querySelector('.modal-close').addEventListener('click', function (e) {
         e.preventDefault();
         modal.classList.remove('is-active');
         html.classList.remove('is-clipped');
