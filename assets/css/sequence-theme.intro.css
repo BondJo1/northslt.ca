@@ -109,7 +109,6 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   -webkit-transform: translateZ(20px);
   transform: translateZ(20px);
@@ -156,13 +155,9 @@ body {
   font-size: 1rem;
 }
 .seq .seq-code-pane {
-  box-sizing: border-box;
-  position: absolute;
-  z-index: 100;
   bottom: 0;
   left: 0;
   right: 0;
-  background: black;
   color: white;
   /* Place the code pane off-screen at the bottom - it will animate in
    * from the bottom
@@ -247,7 +242,6 @@ body {
   outline: dotted gray 1px;
 }
 .seq .seq-view-code:active {
-  background: black;
 }
 .seq .seq-view-code:focus i, .seq .seq-view-code:hover i {
   color: #16B557;
