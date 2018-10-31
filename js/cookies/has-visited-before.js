@@ -1,5 +1,6 @@
 var hasVisited = Cookies.get('hasVisited');
 if (hasVisited != null) {
+    firstvisit.classList.toggle('is-active')
     Cookies.set('hasVisited', 'true', { expires: 365 });
     console.log("The hasVisited cookie has been set, value is " + hasVisited)
 }
