@@ -13,3 +13,10 @@
 #firstvisit {
   z-index: 99999;
 }
+
+.bx-wrapper {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
