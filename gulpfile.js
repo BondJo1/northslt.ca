@@ -125,33 +125,6 @@ gulp.task('compile-scss', function () {
         .pipe(gulp.dest('./_site/assets/css/'));
 });
 
-// Compile Sequence Scss
-gulp.task('compile-scss', function () {
-    var processors = [
-        mq4HoverShim.postprocessorFor({ hoverSelectorPrefix: '.is-true-hover ' }),
-        autoprefixer({
-            browsers: [
-                "Chrome >= 45",
-                "Firefox ESR",
-                "Edge >= 12",
-                "Explorer >= 10",
-                "iOS >= 9",
-                "Safari >= 9",
-                "Android >= 4.4",
-                "Opera >= 30"
-            ]
-        })//,
-        //cssnano(),
-    ];
-    //Watch me get Sassy
-    return gulp.src('./scss/sequence.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass(sassOptions).on('error', sass.logError))
-        .pipe(postcss(processors))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./_site/assets/css/'));
-});
-
 // Compile Html
 gulp.task('compile-html', function() {
     gulp.src('html/pages/**/*.html')
