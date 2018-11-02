@@ -40,3 +40,7 @@
 #contact-us-modal {
   z-index: 99999;
 }
+
+#contact-us-id {
+  height: 32.5rem;
+}
