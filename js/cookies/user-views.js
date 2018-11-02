@@ -6,7 +6,7 @@ else {
 }
 
 function createViews() {
-    Cookie.set('userviews', 1, {
+    Cookie.set('userViews', 1, {
         expires: 365
     });
     console.log('Thanks for visiting! We have set your userViews to 1.');
