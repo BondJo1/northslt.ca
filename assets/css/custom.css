@@ -24,3 +24,7 @@
 #survey-modal {
   z-index: 99999;
 }
+
+.modal-card {
+  height: 100%;
+}
