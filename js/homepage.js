@@ -122,10 +122,6 @@ function contactUsModal() {
         modal.classList.add('is-active');
         html.classList.add('is-clipped')
     });
-    html.querySelector('#contactus-button').addEventListener('click', function (e) {
-        modal.classList.remove('is-active');
-        html.classList.remove('is-clipped')
-    });
 }
 
 //Calls all scripts
