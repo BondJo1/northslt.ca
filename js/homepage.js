@@ -119,9 +119,10 @@ function contactUsModal() {
         modal.classList.remove('is-active');
         html.classList.remove('is-clipped');
     });
-    hero.querySelector('#contactus-button').addEventListener('click', function (e) {
+    document.querySelector('a#open-modal').addEventListener('click', function (event) {
+        event.preventDefault();
         modal.classList.add('is-active');
-        html.classList.add('is-clipped')
+        html.classList.add('is-clipped');
     });
 }
 
