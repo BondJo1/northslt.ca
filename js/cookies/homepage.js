@@ -1,7 +1,11 @@
-const hasVisited = require('./has-visited-previously.js');
-const surveyNotification = require('./survey-notification.js');
-const userViews = require('./user-views.js');
+requirejs(["cookies/survey-notification"], function() {
 
-hasVisited();
-surveyNotification();
-userViews();
+});
+
+requirejs(["cookies/user-views"], function() {
+    
+});
+
+requirejs(["cookies/has-visited-previously"], function() {
+    
+});
