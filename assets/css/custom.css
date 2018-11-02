@@ -44,3 +44,7 @@
 #contact-us-id {
   height: 32.5rem;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
