@@ -36,3 +36,7 @@
 #feedbacksurvey {
   height: 29.5rem !important;
 }
+
+#contact-us-modal {
+  z-index: 99999;
+}
