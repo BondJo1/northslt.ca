@@ -44,7 +44,3 @@
 #contact-us-id {
   height: 32.5rem;
 }
-
-.content-wrapper::-webkit-scrollbar {
-  display: none;
-}
