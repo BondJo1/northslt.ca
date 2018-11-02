@@ -1,5 +1,5 @@
 if (Cookie.exists('userViews')) {
-    if (Cookie.get('userViews') < 9) {
+    if (Cookie.get('userViews') > 9) {
         activateSurveyModal();
     }
 }
