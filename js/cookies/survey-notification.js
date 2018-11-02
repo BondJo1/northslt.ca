@@ -1,12 +1,28 @@
 if (Cookie.exists('userViews')) {
     if (Cookie.get('userViews') > 9) {
         if (Cookie.exists('surveyCompleted')) {
-            console.log('You have already completed the survey, thanks!')
+            logAlreadyDone();
         }
         else {
             activateSurveyModal();
+            setSurveyCookie();
+            logCompleted();
         }
     }
+}
+
+function logAlreadyDone() {
+    console.log('You have already completed the survey, thanks!');
+}
+
+function logCompleted() {
+    console.log('Survey has been shown, and surveyCompleted cookie has been set.');
+}
+
+function setSurveyCookie() {
+    Cookie.set('surveyCompleted', true, {
+        expires: 365
+    });
 }
 
 function activateSurveyModal() {
@@ -20,8 +36,4 @@ function activateSurveyModal() {
         e.preventDefault();
         modal.classList.remove('is-active');
     });
-    Cookie.set('surveyCompleted', true, {
-        expires: 365
-    })
-    console.log('Survey has been shown, and surveyCompleted cookie has been set.')
 }
