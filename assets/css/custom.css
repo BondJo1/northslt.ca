@@ -20,3 +20,7 @@
   margin-right: auto;
   width: 40%;
 }
+
+#survey-modal {
+  z-index: 99999;
+}
