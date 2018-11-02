@@ -2,8 +2,8 @@ if (Cookie.exists('hasVisited')) {
     console.log("The hasVisited cookie is already created.")
 }
 else {
-    activateWelcomeModal();
     setCookie();
+    activateWelcomeModal();
     console.log("The hasVisited cookie has been created.")
 }
 
