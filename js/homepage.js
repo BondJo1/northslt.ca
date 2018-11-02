@@ -105,7 +105,31 @@ function userViews() {
     }
 }
 
+function contactUsModal() {
+    var modal = document.querySelector('#contact-us-modal');
+    var html = document.querySelector('html');
+    modal.querySelector('#survey-modal-close').addEventListener('click', function (e) {
+        e.preventDefault();
+        modal.classList.remove('is-active');
+        html.classList.remove('is-clipped');
+    });
+    modal.querySelector('.modal-background').addEventListener('click', function (e) {
+        e.preventDefault();
+        modal.classList.remove('is-active');
+        html.classList.remove('is-clipped');
+    });
+    html.querySelector('#contactus-button').addEventListener('click', function (e) {
+        modal.classList.add('is-active');
+        html.classList.add('is-clipped')
+    });
+    html.querySelector('#contactus-button').addEventListener('click', function (e) {
+        modal.classList.remove('is-active');
+        html.classList.remove('is-clipped')
+    });
+}
+
 //Calls all scripts
 userViews();
 hasVisited();
 surveyModal();
+contactUsModal();
