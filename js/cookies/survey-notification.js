@@ -19,4 +19,8 @@ function activateSurveyModal() {
         modal.classList.remove('is-active');
         html.classList.remove('is-clipped');
     });
+    Cookie.set('surveyCompleted', true, {
+        expires: 365
+    })
+    console.log('Survey has been shown, and surveyCompleted cookie has been set.')
 }
