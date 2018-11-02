@@ -117,7 +117,12 @@ function contactUsModal() {
             modal.classList.remove('is-active');
             html.classList.remove('is-clipped');
         });
-        modal.querySelector('#close-contect-modal').addEventListener('click', function (e) {
+        modal.querySelector('#close-contact-modal').addEventListener('click', function (e) {
+            e.preventDefault();
+            modal.classList.remove('is-active');
+            html.classList.remove('is-clipped');
+        });
+        modal.querySelector('#contact-aria-close').addEventListener('click', function (e) {
             e.preventDefault();
             modal.classList.remove('is-active');
             html.classList.remove('is-clipped');
