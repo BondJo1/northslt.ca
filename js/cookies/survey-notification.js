@@ -5,7 +5,7 @@ if (Cookie.exists('userViews')) {
 }
 
 function activateSurveyModal() {
-    var modal = document.querySelector('.survey-modal');
+    var modal = document.querySelector('#survey-modal');
     var html = document.querySelector('html');
     modal.classList.add('is-active');
     html.classList.add('is-clipped')
