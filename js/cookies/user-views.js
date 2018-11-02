@@ -6,7 +6,7 @@ else {
 }
 
 function createViews() {
-    Cookie.set('userViews', 1, {
+    Cookie.set('userViews', 1 , {
         expires: 365
     });
     console.log('Thanks for visiting! We have set your userViews to 1.');
@@ -20,5 +20,5 @@ function updateViews() {
         expires: 365
     });
     var updatedViews = Cookie.get('userViews');
-    console.log('userViews value has now been updated, you have visited the website ' + updatedViews + 'times.');
+    console.log('userViews value has now been updated, you have visited the website ' + updatedViews + ' times.');
 }
