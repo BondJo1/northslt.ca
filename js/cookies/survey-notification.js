@@ -4,7 +4,7 @@ if (Cookie.exists('userViews')) {
     }
 }
 
-function activateSurveyModal() {
+/*function activateSurveyModal() {
     var modal = document.querySelector('.modal');
     var html = document.querySelector('html');
     modal.classList.add('is-active');
@@ -19,4 +19,4 @@ function activateSurveyModal() {
         modal.classList.remove('is-active');
         html.classList.remove('is-clipped');
     });
-}
+}*/
