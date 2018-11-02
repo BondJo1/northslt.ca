@@ -45,6 +45,6 @@
   height: 32.5rem;
 }
 
-::-webkit-scrollbar {
+.content-wrapper::-webkit-scrollbar {
   display: none;
 }
