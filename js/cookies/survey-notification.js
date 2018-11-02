@@ -4,8 +4,8 @@ if (Cookie.exists('userViews')) {
             logAlreadyDone();
         }
         else {
-            activateSurveyModal();
             setSurveyCookie();
+            activateSurveyModal();
             logCompleted();
         }
     }

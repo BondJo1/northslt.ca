@@ -2,12 +2,12 @@ if (Cookie.exists('hasVisited')) {
     console.log("The hasVisited cookie is already created.")
 }
 else {
-    setCookie();
+    setVisitedCookie();
     activateWelcomeModal();
     console.log("The hasVisited cookie has been created.")
 }
 
-function setCookie() {
+function setVisitedCookie() {
     Cookie.set('hasVisited', 'true', {
         expires: 365
     });
