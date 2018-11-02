@@ -28,3 +28,11 @@
 .modal-card {
   height: 100%;
 }
+
+.modal-card-body {
+  height: 24rem;
+}
+
+#feedbacksurvey {
+  height: 32.5rem !important;
+}
