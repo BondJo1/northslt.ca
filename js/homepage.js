@@ -108,6 +108,7 @@ function userViews() {
 function contactUsModal() {
     var modal = document.querySelector('#contact-us-modal');
     var html = document.querySelector('html');
+    var hero = document.querySelector('hero-body');
     modal.querySelector('#survey-modal-close').addEventListener('click', function (e) {
         e.preventDefault();
         modal.classList.remove('is-active');
@@ -118,7 +119,7 @@ function contactUsModal() {
         modal.classList.remove('is-active');
         html.classList.remove('is-clipped');
     });
-    html.querySelector('#contactus-button').addEventListener('click', function (e) {
+    hero.querySelector('#contactus-button').addEventListener('click', function (e) {
         modal.classList.add('is-active');
         html.classList.add('is-clipped')
     });
