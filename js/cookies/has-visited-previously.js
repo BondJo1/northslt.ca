@@ -14,7 +14,7 @@ function setCookie() {
 }
 
 function activateWelcomeModal() {
-    var modal = document.querySelector('.modal');
+    var modal = document.querySelector('.contact-us-modal');
     var html = document.querySelector('html');
     modal.classList.add('is-active');
     html.classList.add('is-clipped')
