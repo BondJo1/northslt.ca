@@ -14,7 +14,7 @@ function createViews() {
 
 function updateViews() {
     var currentViews = Cookie.get('userViews');
-    var addCurrentView = currentViews + 1;
+    var addCurrentView = +currentViews + 1;;
     console.log(addCurrentView)
     Cookie.set('userViews', addCurrentView, {
         expires: 365
