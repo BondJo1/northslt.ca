@@ -1,6 +1,11 @@
 if (Cookie.exists('userViews')) {
     if (Cookie.get('userViews') > 9) {
-        activateSurveyModal();
+        if (Cookie.exists('surveyCompleted')) {
+            console.log('You have already completed the survey, thanks!')
+        }
+        else {
+            activateSurveyModal();
+        }
     }
 }
 
