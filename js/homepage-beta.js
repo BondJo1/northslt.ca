@@ -1,11 +1,14 @@
 function surveyModal() {
-  if (localStorage.surveyCompleted = true) {
-      logAlreadyDone();
-  }
-  else if (localStorage.userViews < 9) {
-      setSurveyCookie();
-      activateSurveyModal();
-      logCompleted();
+  if (localStorage.userViews) {
+    if (localStorage.userViews > 9) {
+      if (localStorage.surveyCompleted) {
+        logAlreadyDone();
+      }
+      else {
+        setSurveyCookie();
+        activateSurveyModal();
+        logCompleted();
+    }
   }
 }
 
