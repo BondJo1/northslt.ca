@@ -44,3 +44,12 @@
 #contact-us-id {
   height: 32.5rem;
 }
+
+.navbar-item {
+  transition: 0.3s;
+}
+
+.navbar-item:hover {
+  transition: 0.3s;
+  color: white;
+}
