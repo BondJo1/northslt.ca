@@ -47,7 +47,6 @@
 
 .navbar-item {
   transition: 0.3s;
-  -webkit-transition: 0.3s;
 }
 
 .navbar-item:hover {
