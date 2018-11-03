@@ -1,5 +1,5 @@
 function surveyModal() {
-  if (localStorage.userViews > 9) {
+  if ((localStorage.userViews) > 9) {
     logAlreadyDone();
   } else {
     setSurveyCookie();
