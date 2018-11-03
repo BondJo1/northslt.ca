@@ -3,11 +3,11 @@ function surveyModal() {
     if (localStorage.userViews > 9) {
       if (localStorage.surveyCompleted) {
         logAlreadyDone();
-      }
-      else {
+      } else {
         setSurveyCookie();
         activateSurveyModal();
         logCompleted();
+      }
     }
   }
 }
