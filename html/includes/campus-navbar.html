@@ -1,0 +1,100 @@
+<nav class="navbar is-fresh is-transparent no-shadow" style="background:transparent;position:absolute;top:0;left:0;right:0"
+    role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://northslt.ca">
+                <img src="{{root}}assets/images/logo.png">
+            </a>
+
+            <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+                <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+                    <svg width="1000px" height="1000px">
+                        <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                        <path class="path2" d="M 300 500 L 700 500"></path>
+                        <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+                    </svg>
+                    <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+                </div>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbar-menu" class="navbar-menu is-static">
+
+            <div class="navbar-start">
+                <a class="navbar-item is-hidden-mobile">
+                    <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+                        <svg width="1000px" height="1000px">
+                            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                            <path class="path2" d="M 300 500 L 700 500"></path>
+                            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+                        </svg>
+                        <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <a href="/" class="navbar-item is-secondary">
+                    Home
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Campuses
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a href="/campuses/abbotsford" class="navbar-item">
+                            Abbotsford
+                        </a>
+                        <a href="/campuses/calgary" class="navbar-item">
+                            Calgary
+                        </a>
+                        <a href="/campuses/edmonton" class="navbar-item">
+                            Edmonton
+                        </a>
+                        <a href="/campuses/hamilton" class="navbar-item">
+                            Hamilton
+                        </a>
+                        <a href="/campuses/maple-creek" class="navbar-item">
+                            Maple Creek
+                        </a>
+                        <a href="/campuses/montreal" class="navbar-item">
+                            Montreal
+                        </a>
+                        <a href="/campuses/mossley" class="navbar-item">
+                            Mossley
+                        </a>
+                        <a href="/campuses/oxbow" class="navbar-item">
+                            Oxbow
+                        </a>
+                        <a href="/campuses/regina" class="navbar-item">
+                            Regina
+                        </a>
+                        <a href="/campuses/rideau-lakes" class="navbar-item">
+                            Rideau Lakes
+                        </a>
+                        <a href="/campuses/stonewall" class="navbar-item">
+                            Stonewall
+                        </a>
+                    </div>
+                </div>
+                <a href="/blog" class="navbar-item is-secondary">
+                    Blog
+                </a>
+                <a href="/calendar" class="navbar-item is-secondary">
+                    Calendar
+                </a>
+                <!--<a class="navbar-item">
+                    <span class="button signup-button rounded secondary-btn raised">
+                        Sign up
+                    </span>
+                </a>-->
+            </div>
+        </div>
+    </div>
+</nav>
