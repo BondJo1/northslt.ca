@@ -42,7 +42,6 @@ Navbar
     &.is-secondary {
       &:hover {
         color: $secondary;
-        transition: 0.3s;
       }
     }
     &.has-dropdown {
@@ -63,11 +62,6 @@ Navbar
         border-top-color: $secondary;
         .navbar-item {
           padding: 10px 20px;
-        }
-        &:hover {
-          .navbar-dropdown {
-            transition: 0.3s;
-          }
         }
       }
       &:hover {
