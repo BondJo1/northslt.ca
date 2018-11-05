@@ -41,7 +41,7 @@ Navbar
     color: $muted-grey;
     &.is-secondary {
       &:hover {
-        color: white !important;
+        color: $secondary;
         transition: 0.3s;
       }
     }
@@ -67,7 +67,7 @@ Navbar
       }
       &:hover {
         .navbar-link {
-          color: white;
+          color: $secondary;
           transition: 0.3s;
           &:after {
             border-color: $secondary;
