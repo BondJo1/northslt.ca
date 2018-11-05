@@ -44,21 +44,3 @@
 #contact-us-id {
   height: 32.5rem;
 }
-
-.navbar-item {
-  transition: 0.3s;
-}
-
-.navbar.is-fresh .container .navbar-menu.is-static .navbar-end .navbar-item.has-dropdown .navbar-item.is-secondary:hover {
-  color: white !important;
-  transition: 0.3s
-}
-
-.navbar.is-fresh .container .navbar-menu.is-static .navbar-end .navbar-item.has-dropdown .navbar-link:hover {
-  color: white !important;
-  transition: 0.3s;
-}
-
-.navbar.is-fresh .container .navbar-menu.is-static .navbar-end .navbar-item.has-dropdown .navbar-link {
-  transition: 0.3s;
-}

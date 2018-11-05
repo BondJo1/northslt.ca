@@ -41,7 +41,7 @@ Navbar
     color: $muted-grey;
     &.is-secondary {
       &:hover {
-        color: $secondary !important;
+        color: white !important;
       }
     }
     &.has-dropdown {
@@ -66,7 +66,8 @@ Navbar
       }
       &:hover {
         .navbar-link {
-          color: $secondary;
+          color: white;
+          transition: 0.3s;
           &:after {
             border-color: $secondary;
           }
