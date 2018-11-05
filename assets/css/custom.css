@@ -53,3 +53,12 @@
   color: white !important;
   transition: 0.3s
 }
+
+.navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link {
+  color: white !important;
+  transition: 0.3s;
+}
+
+.navbar.is-fresh .navbar-item.has-dropdown .navbar-link {
+  transition: 0.3s;
+}
