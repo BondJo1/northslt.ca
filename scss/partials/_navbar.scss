@@ -42,6 +42,7 @@ Navbar
     &.is-secondary {
       &:hover {
         color: white !important;
+        transition: 0.3s;
       }
     }
     &.has-dropdown {
