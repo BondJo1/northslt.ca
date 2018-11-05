@@ -67,7 +67,6 @@ Navbar
       &:hover {
         .navbar-link {
           color: $secondary;
-          transition: 0.3s;
           &:after {
             border-color: $secondary;
           }
