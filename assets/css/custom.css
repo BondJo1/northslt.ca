@@ -49,7 +49,7 @@
   transition: 0.3s;
 }
 
-.navbar-item:hover {
-  transition: 0.3s;
-  color: white;
+.navbar.is-fresh .navbar-item.is-secondary:hover {
+  color: white !important;
+  transition: 0.3s
 }
