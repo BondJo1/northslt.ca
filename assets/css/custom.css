@@ -44,3 +44,8 @@
 #contact-us-id {
   height: 32.5rem;
 }
+
+#menu-icon-wrapper {
+  margin-left: -17px !important;
+  z-index: 9999;
+}
