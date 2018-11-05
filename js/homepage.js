@@ -4,7 +4,7 @@ function surveyModal() {
       if (localStorage.surveyCompleted) {
         logAlreadyDone();
       } else {
-        setSurveyCookie();
+        setSurveyVariable();
         activateSurveyModal();
         logCompleted();
       }
@@ -22,7 +22,7 @@ function logCompleted() {
   );
 }
 
-function setSurveyCookie() {
+function setSurveyVariable() {
   localStorage.surveyCompleted = true;
 }
 
@@ -51,12 +51,12 @@ function hasVisited() {
   if (localStorage.hasVisited) {
     console.log("The hasVisited cookie is already created.");
   } else {
-    setVisitedCookie();
+    setVisitedVariable();
     activateWelcomeModal();
     console.log("The hasVisited cookie has been created.");
   }
 
-  function setVisitedCookie() {
+  function setVisitedVariable() {
     localStorage.hasVisited = true;
   }
 
