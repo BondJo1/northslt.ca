@@ -1,10 +1,12 @@
-$('.image-slider').bxSlider({
-    mode: 'fade',
-    captions: true,
-    slideWidth: 600
+$(function () {
+    $('.image-slider').bxSlider({
+        mode: 'fade',
+        captions: true,
+        slideWidth: 600
+    });
 });
 
-$('#scrollto').click(function() {
+$('#scrollto').click(function () {
     $('.sidebar').removeClass('is-active');
     $('.menu-icon-wrapper').removeClass('open');
 })
