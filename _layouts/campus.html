@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-{{> header}}
+{% include header.html %}
 <script src="{{ root }}assets/js/campus-page.js"></script>
 
 <body>
-    {{> campus-navbar}}
-    {{> campus-hero}}
-    {{> body}}
-    {{> footer}}
-    {{> backtotop}}
-    {{> campus-sidebar}}
-    {{> scripts}}
+    {% include campus-navbar.html %}
+    {% include campus-hero.html %}
+    {% include body.html %}
+    {% include footer.html %}
+    {% include backtotop.html %}
+    {% include campus-sidebar.html %}
+    {% include scripts.html %}
 </body>
 
 </html>
