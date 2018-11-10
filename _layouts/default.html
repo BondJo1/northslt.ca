@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    {{> header}}
+    {% include header.html %}
     <body>
-        {{> contact-us-modal}}
-        {{> firstvisit}}
-        {{> survey-modal}}
-        {{> navbar}}
-        {{> body}}
-        {{> footer}}
-        {{> backtotop}}
-        <!--{{> sidebar}}-->
-        {{> scripts}}
+        {% include contact-us-modal.html %}
+        {% include firstvisit.html %}
+        {% include survey-modal.html %}
+        {% include navbar.html %}
+        {% include body.html %}
+        {% include footer.html %}
+        {% include backtotop.html %}
+        {% include scripts.html %}
     </body>  
 </html>
