@@ -13,13 +13,13 @@ import-js: blog.js
                 <figure class="image">
                     <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
                         <img src="{{ post.thumbnail | prepend: site.baseurl }}" alt="{{ post.title }}">
+                        <h1>{{ post.title }}</h1>
                     </a>
                 </figure>
             </div>
             {% endif %}
             <div class="card-content">
-                <h3 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{
-                        post.title }}</a></h3>
+                <h3 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
                 <p class="post-categories">
                     {% for category in post.categories %}
                     <a href="/{{ category | prepend: site.baseurl }}" class="tag {% if site.data.category[category].color %} is-{{ site.data.category[category].color }} {% endif %}">{{
@@ -32,8 +32,10 @@ import-js: blog.js
         <br>
         {% endfor %}
         <nav class="pagination is-centered">
-            <a {% if paginator.previous_page %}href="..{{  paginator.previous_page_path }}" {% endif %} class="pagination-previous {% if paginator.previous_page %}{% else %} is-disabled {% endif %}">Previous Page</a>
-            <a {% if paginator.next_page %}href="..{{  paginator.next_page_path }}" {% endif %} class="pagination-next {% if paginator.next_page %}{% else %} is-disabled {% endif %}">Next Page</a>
+            <a {% if paginator.previous_page %}href="..{{  paginator.previous_page_path }}" {% endif %} class="pagination-previous {% if paginator.previous_page %}{% else %} is-disabled {% endif %}">Previous
+                Page</a>
+            <a {% if paginator.next_page %}href="..{{  paginator.next_page_path }}" {% endif %} class="pagination-next {% if paginator.next_page %}{% else %} is-disabled {% endif %}">Next
+                Page</a>
             <ul class="pagination-list">
                 {% for page in (1..paginator.total_pages) %}
                 <li>
