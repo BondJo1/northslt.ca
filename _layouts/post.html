@@ -1,3 +1,15 @@
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container is-fluid">
+            <h1 class="title">
+                {{ page.title }}
+            </h1>
+            <h2 class="subtitle">
+                {{ page.description }}
+            </h2>
+        </div>
+    </div>
+</section>
 <section class="section">
     <div class="container is-fluid">
         <div class="content">
@@ -5,3 +17,24 @@
         </div>
     </div>
 </section>
+{% if site.author.show_on_post or page.comments %}
+<div class="section">
+    <div class="container is-fluid">
+
+        {% if site.author.show_on_post %}
+        <div class="box">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>{{ site.author.name }}</strong>
+                            <br>
+                            {{ site.author.bio }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
