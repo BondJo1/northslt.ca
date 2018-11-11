@@ -3,27 +3,26 @@ layout: default
 title: Blog
 ---
 
-<!--<section class="section is-medium">
-    <div class="container">
-        <div class="columns">
-            <div class="card">
-                <li>
-                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                    <p>{{ post.excerpt }}</p>
-                </li>
-            </div>
-        </div>
-    </div>
-</section>-->
-
 <section class="hero is-fullheight is-default is-bold">
     <div class="hero-body">
         <div class="container">
             <div class="columns is-vcentered">
                 {% for post in site.posts %}
                 <div class="card">
-                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                    <p>{{ post.excerpt }}</p>
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            {{ post.title }}
+                        </p>
+                        </a>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            {{ post.excerpt }}
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="{{ post.url }}" class="card-footer-item">Learn more</a>
+                    </footer>
                 </div>
                 {% endfor %}
             </div>
