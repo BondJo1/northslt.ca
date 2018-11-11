@@ -49,3 +49,14 @@
     margin-left: -17px !important;
   }
   
+  .card {
+    border-radius: 16px;
+  }
+
+  .card-header-title {
+    color: white;
+  }
+
+  .card-content .content {
+    color: white;
+  }
