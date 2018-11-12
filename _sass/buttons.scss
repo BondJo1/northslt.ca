@@ -38,8 +38,8 @@ Classes to change the feel of bulma buttons
 .button {
     &.primary-btn {
         outline: none;
-        border-color: $primary;
-        background-color: $primary;
+        border-color: #80BB09;
+        background-color: #80BB09;
         color: $white;
         transition: all 0.5s;
         &:hover {
@@ -50,12 +50,12 @@ Classes to change the feel of bulma buttons
             opacity: 0.8;
         }
         &.btn-outlined {
-            border-color: $primary;
-            color: $primary;
+            border-color: #80BB09;
+            color: #80BB09;
             background-color: transparent; 
             &:hover {
                 color: $white;
-                background-color: $primary;
+                background-color: #80BB09;
             }
         }
     }
