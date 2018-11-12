@@ -69,6 +69,12 @@
   width: 100% !important;
 }
 
-.spacer {
-  width: 10rem;
+.card-content {
+  margin-top: 2rem;
+  margin-bottom: -7rem;
+}
+
+#blog-container {
+  margin-left: 4rem;
+  margin-bottom: 8rem;
 }
