@@ -1,6 +1,4 @@
 title: Northern SLT
-url: 'https://beta.northslt.ca'
-baseurl: 'null'
 google_analytics_key: 'null'
 disqus_shortname: 'null'
 newsletter_action: 'null'
@@ -50,6 +48,3 @@ defaults:
       path: index.html
     values:
       body_class: show_hero_search
-      
-sass:
-    sass_dir: _sass
