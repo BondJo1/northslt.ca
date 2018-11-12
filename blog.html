@@ -1,0 +1,22 @@
+---
+layout: default
+title: Blog
+---
+
+<div id="blog-container" class="container is-centered">
+    {% for post in site.posts %}
+    <section class="section">
+        <div class="container">
+            <div class="card post-card">
+                <div class="card-content">
+                    <div class="content">
+                        <h3>{{ post.title }}</h3>
+                        <div class="divider"></div>
+                        <p>{{ post.excerpt }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+</div>
