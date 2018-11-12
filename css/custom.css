@@ -78,3 +78,12 @@
   margin-left: 4rem;
   margin-bottom: 8rem;
 }
+
+.navbar.is-fresh .navbar-item.is-secondary:hover {
+  color: black;
+}
+
+.navbar.is-fresh .navbar-item.has-dropdown .navbar-link:hover {
+  color: black;
+}
+
