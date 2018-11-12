@@ -1,7 +1,5 @@
-.DS_Store
-bower_components
+_site/
+.sass-cache/
+.jekyll-metadata
 node_modules
-npm-debug.log
-_site
-.sass-cache
-.vscode/launch.json
+settings.json
